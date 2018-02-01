@@ -1,5 +1,5 @@
-# jquery.leftbar
-Plugin JQuery que genera en el lateral izquierdo de la pantalla una barra de menú con los nombres y las imágenes que se les pasan.
+# jquery.leftbar (EN DESARROLLO)
+Es Plugin JQuery que genera en el lateral izquierdo de la pantalla una barra de menú con los nombres y las imágenes que se les pasan.
 
 ## Objetivos
 - [ ] Crear una barra de menú
