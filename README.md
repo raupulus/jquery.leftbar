@@ -22,3 +22,12 @@ Es Plugin JQuery que genera en el lateral izquierdo de la pantalla una barra de 
 ## Tamaño de las imágenes
 
 ## Longitud máxima de título
+
+## Modo de uso
+Importa primero la librería jQuery y después este plugin.
+
+Ejemplo:
+```html
+    <script type="text/javascript" src="./jquery-3.3.1"></script>
+    <script type="text/javascript" src="./jquery.leftbar.js"></script>
+```
