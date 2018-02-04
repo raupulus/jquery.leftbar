@@ -37,19 +37,24 @@
             $('#des_caja').append(agregar);
         });
 
-        // Evento al pasar sobre un elemento del menú
-        // $('#des_caja.des_all > img').hover(
-        //     function() {
-        //
-        //     },
-        //     function() {
-        //
-        //     },
-        // );
+        // Oculta todos los títulos de menú para que se muestren luego
+        $('#des_caja .des_all .des_letras').hide();
 
-        // Evento al hacer click sobre un elemento del menú
-        $('#des_caja .des_all img').on('click', function() {
-            location.href = $(this).data('link');
+        // Evento al pasar sobre un elemento del menú
+        $('#des_caja .des_all > img').hover(
+            function() {
+                //$(this).siblings('.des_letras').css({opacity : 1});
+                $(this).siblings('.des_letras').show();
+            },
+            function() {
+                //$(this).parent().children('.des_letras').show();
+                $(this).siblings('.des_letras').hide();
+            },
+        );
+
+        // Evento al hacer click sobre un elemento/imagen del menú
+        $('#des_caja .des_all > img').on('click', function() {
+            location.href = $(this).data('link');  // Extrae link de la imagen
         });
     };
 })(jQuery);
