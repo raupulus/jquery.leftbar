@@ -43,11 +43,9 @@
         // Evento al pasar sobre un elemento del menú
         $('#des_caja .des_all > img').hover(
             function() {
-                //$(this).siblings('.des_letras').css({opacity : 1});
                 $(this).siblings('.des_letras').show();
             },
             function() {
-                //$(this).parent().children('.des_letras').show();
                 $(this).siblings('.des_letras').hide();
             },
         );
