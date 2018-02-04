@@ -11,11 +11,17 @@
     <style>
 
     </style>
-    <script type="text/javascript" src="./jquery-3.3.1"></script>
-    <script src="./jquery.leftbar.js"></script>
+    <script type="text/javascript" src="./jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="./jquery.leftbar.js"></script>
     <script type="text/javascript">
         window.onload = function() {
-
+            $.leftbar({
+                color: 'red',
+            },
+            [
+                [1,2,3],
+                [4,5,6]
+            ]);
         }
     </script>
 </head>
