@@ -12,7 +12,7 @@
      * @param  {Array}   entradas Array que contiene un array por cada entrada
      *                   [0] → Nombre del menú
      *                   [1] → Imagen de miniatura 120x80px
-     *                   [3] → Enlace hacia donde llevará
+     *                   [2] → Enlace hacia donde llevará
      */
     $.leftbar = function(options, entradas) {
         var conf = {
@@ -23,17 +23,33 @@
         };
 
         $.extend(conf, options);
-        $('body').append('<div id="cajaDesplegableIzq"></div>');
+        $('body').append('<div id="des_caja"></div>');
 
         // Por cada entrada añade un elemento al menú
         $(entradas).each(function() {
             var agregar = '' +
-                '<div id="???">' +
-                    '<img src="' + $(this)[1] + '" />' +
-                    '<div id="???">' + $(this)[0] + '</div>' +
+                '<div class="des_all">' +
+                    '<img src="' + $(this)[1] +
+                        '" data-link="' + $(this)[2] + '"/>' +
+                    '<div class="des_letras">' + $(this)[0] + '</div>' +
                 '</div>'
 
-            $('#cajaDesplegableIzq').append(agregar);
+            $('#des_caja').append(agregar);
+        });
+
+        // Evento al pasar sobre un elemento del menú
+        // $('#des_caja.des_all > img').hover(
+        //     function() {
+        //
+        //     },
+        //     function() {
+        //
+        //     },
+        // );
+
+        // Evento al hacer click sobre un elemento del menú
+        $('#des_caja .des_all img').on('click', function() {
+            location.href = $(this).data('link');
         });
     };
 })(jQuery);
