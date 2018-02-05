@@ -23,6 +23,8 @@
             letras_color: '#000000',       // Color de letras título
             letras_background: '#ffffff',  // Color de fondo letras
             letras_borde: '#cc6633',       // Color del borde para bloque letras
+            letras_ancho: 'auto',          // El ancho del bloque para letras
+            letras_alto: '20px',           // El ancho del bloque para letras
         };
 
         $.extend(conf, options);
@@ -112,8 +114,8 @@
             'padding-bottom: 4px;' +
             'padding-left: 8px;' +
             'padding-right: 8px;' +
-            'width: auto;' +
-            'height: 20px;' +
+            'width:' + conf.letras_ancho + ';' +
+            'height:' + conf.letras_alto + ';' +
             'color:' + conf.letras_color +';' +
             'text-align: center;' +
             'font-family: fantasy;' +
