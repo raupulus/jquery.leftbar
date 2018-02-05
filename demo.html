@@ -13,7 +13,13 @@
     <script type="text/javascript">
         window.onload = function() {
             $.leftbar({
-                color: 'red',
+                back1: 'rgba(0, 11, 255,1)',  // Degradado → 0%
+                back2: 'rgba(91, 255, 0,1)',  // Degradado → 20%
+                back3: 'rgba(255, 0, 109,1)', // Degradado → 45%
+                back4: 'rgba(255, 164, 0,1)', // Degradado → 100%
+                letras_color: '#FFD500',      // Color de letras título
+                letras_background: '#cc6633', // Color de fondo letras
+                letras_borde: '#000BFF',      // Color del borde para de letras
             },
             [
                 ['Menú 1','./images/1.jpg','#'],
@@ -29,5 +35,8 @@
 
 <body>
     <h1>Ejemplo de barra de menú en Funcionamiento</h1>
+    <p>
+        En este ejemplo se ha pasado una configuración personalizada completa
+    </p>
 </body>
 </html>
