@@ -38,6 +38,11 @@ La invocación del plugin tendrá siempre 2 parámetros:
     * [1] → Imagen de miniatura 120x80px
     * [2] → Enlace hacia donde llevará
 
+## Visualización con personalizaciones
+Los colores con los que se visualiza el plugin pueden ser modificados a tu gusto, estos son unos ejemplos de configuración rápida introduciendo varios colores al azar
+![Ejemplo de configuración básica](./Previsualizaciones/preview2.png)
+![Ejemplo de configuración básica](./Previsualizaciones/preview4.png)
+![Ejemplo de configuración básica](./Previsualizaciones/preview3.png)
 
 
 ## Invocación
