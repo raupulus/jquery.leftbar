@@ -64,7 +64,6 @@
             'opacity: 0.6;' +
             'top: 115px;' +
             'width: 80px;' +
-            'height: 345px;' +
             'color: white;' +
             'z-index: 50;' +
             'left:-55px;' +
