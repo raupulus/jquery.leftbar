@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+ * @author Raúl Caro Pastorino
+ * @copyright Copyright © 2017 Raúl Caro Pastorino
+ * @license https://wwww.gnu.org/licenses/gpl.txt
+-->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Demostración de Plugin Barra Lateral</title>
+    <script type="text/javascript" src="./jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="./jquery.leftbar.js"></script>
+    <script type="text/javascript">
+        window.onload = function() {
+            $.leftbar({
+                back1: 'rgba(0, 11, 255,1)',  // Degradado → 0%
+                back2: 'rgba(91, 255, 0,1)',  // Degradado → 20%
+                back3: 'rgba(255, 0, 109,1)', // Degradado → 45%
+                back4: 'rgba(255, 164, 0,1)', // Degradado → 100%
+                letras_color: '#FFD500',      // Color de letras título
+                letras_background: '#cc6633', // Color de fondo letras
+                letras_borde: '#000BFF',      // Color del borde para de letras
+            },
+            [
+                ['Menú1','./images/1.jpg','#'],
+                ['Menú2','./images/2.jpg','#'],
+                ['Menú3','./images/3.jpg','#'],
+                ['Menú4','./images/4.jpg','#'],
+                ['Menú5','./images/5.jpg','#'],
+                ['Menú6','./images/6.jpg','http://www.fryntiz.es'],
+            ]);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Ejemplo de barra de menú en Funcionamiento</h1>
+    <p>
+        En este ejemplo se ha pasado una configuración personalizada completa
+    </p>
+</body>
+</html>

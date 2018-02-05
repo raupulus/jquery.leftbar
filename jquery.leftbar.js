@@ -16,12 +16,15 @@
      */
     $.leftbar = function(options, entradas) {
         var conf = {
-            background1: '',
-            background2: '',
-            color: '',
-            letras_background: '#ffffff',
-            letras_borde: '#cc6633',
-            position: '',
+            back1: 'rgba(242,246,248,1)',  // Degradado → 0%
+            back2: 'rgba(216,225,231,1)',  // Degradado → 20%
+            back3: 'rgba(181,198,208,1)',  // Degradado → 45%
+            back4: 'rgba(224,239,249,1)',  // Degradado → 100%
+            letras_color: '#000000',       // Color de letras título
+            letras_background: '#ffffff',  // Color de fondo letras
+            letras_borde: '#cc6633',       // Color del borde para bloque letras
+            letras_ancho: 'auto',          // El ancho del bloque para letras
+            letras_alto: '20px',           // El ancho del bloque para letras
         };
 
         $.extend(conf, options);
@@ -61,15 +64,18 @@
         '#des_caja {' +
             'position:fixed;' +
             'opacity: 0.6;' +
-            'top:115px;' +
-            'width:80px;' +
-            'height: 345px;' +
-            'color:white;' +
+            'top: 115px;' +
+            'width: 80px;' +
+            'color: white;' +
             'z-index: 50;' +
             'left:-55px;' +
             'box-shadow: 15px 20px 20px black;' +
             'background-color: darkgray;' +
-            'background: linear-gradient(to right, rgba(242,246,248,1) 0%, rgba(216,225,231,1) 20%, rgba(181,198,208,1) 45%, rgba(224,239,249,1) 100%);' +
+            'background: linear-gradient(to right,' +
+                conf.back1 + '0%,'  +
+                conf.back2 + '20%,' +
+                conf.back3 + '45%,' +
+                conf.back4 + '100%);' +
             'border-radius: 0px 15px 15px 0px;' +
         '}' +
         '#des_caja:hover {' +
@@ -108,9 +114,9 @@
             'padding-bottom: 4px;' +
             'padding-left: 8px;' +
             'padding-right: 8px;' +
-            'width: auto;' +
-            'height: 20px;' +
-            'color:black;' +
+            'width:' + conf.letras_ancho + ';' +
+            'height:' + conf.letras_alto + ';' +
+            'color:' + conf.letras_color +';' +
             'text-align: center;' +
             'font-family: fantasy;' +
             'font-style: oblique;' +
