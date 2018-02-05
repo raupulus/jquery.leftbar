@@ -15,8 +15,14 @@ En estos momentos está recién creado y termino de mejorar su código.
 - [x] Menú ligeramente enterrado hacia la izquierda, saldrá del todo al pasar ratón por encima de la propia barra o cualquiera de sus elementos
 
 ## Descripción
+Es un menú configurable y adaptable.
+
+Cuando lo invocamos le podemos decir los colores y tamaños que debe utilizar, además como segundo parámetro le pasaremos una matriz indicando cada elemento del menú.
+
+El menú quedará un poco oculto fuera de página, con algo de transparencia hasta que pasamos el ratón por encima dándole movimiento al elemento bajo este y mostrando su título.
 
 ## Visualización
+![Ejemplo de configuración básica](./Previsualizaciones/preview4.png)
 
 ## Parámetros
 
