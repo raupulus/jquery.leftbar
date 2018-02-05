@@ -19,7 +19,8 @@
             background1: '',
             background2: '',
             color: '',
-            border: '',
+            letras_background: '#ffffff',
+            letras_borde: '#cc6633',
             position: '',
         };
 
@@ -57,7 +58,7 @@
         });
 
         var des_estilos = '<style>' +
-        '#des_caja{' +
+        '#des_caja {' +
             'position:fixed;' +
             'opacity: 0.6;' +
             'top:115px;' +
@@ -79,12 +80,12 @@
         '.des_all {' +
             'width: 110px;' +
             'z-index: 12;' +
-            'left:5px;' +
+            'left: 5px;' +
             'opacity: 1;' +
         '}' +
         '.des_all:hover {' +
-            'width:130px;' +
-            'left:15px;' +
+            'width: 130px;' +
+            'left: 15px;' +
         '}' +
         '.des_all > img {' +
             'width: 70px;' +
@@ -97,15 +98,15 @@
             'margin-left: 15px;' +
             'cursor: pointer;' +
             'transition-duration: 0.5s;' +
-            'transform:rotate(15deg) scale(1);' +
+            'transform: rotate(15deg) scale(1);' +
         '}' +
         '.des_letras {' +
             'position: absolute;' +
-            'background-color: white;' +
+            'background-color:' + conf.letras_background + ';' +
             'left: 90px;' +
             'padding-top: 1px;' +
             'padding-bottom: 4px;' +
-            'padding-left:8px;' +
+            'padding-left: 8px;' +
             'padding-right: 8px;' +
             'width: auto;' +
             'height: 20px;' +
@@ -114,13 +115,14 @@
             'font-family: fantasy;' +
             'font-style: oblique;' +
             'font-size: 18px;' +
-            'border: 3px solid orange;' +
+            'border: 3px solid' + conf.letras_borde + ';' +
             'border-radius: 10px 10px 10px 10px;' +
             'transition-delay: 0.2s;' +
             'transform:rotate(5deg) scale(1);' +
         '}' +
-    '</style>'
+        '</style>'
 
-    $('head').append(des_estilos);
+        //Añade estilos al <head></head>
+        $('head').append(des_estilos);
     };
 })(jQuery);
