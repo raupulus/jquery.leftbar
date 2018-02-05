@@ -45,17 +45,60 @@ Los colores con los que se visualiza el plugin pueden ser modificados a tu gusto
 ![Ejemplo de configuración básica](./Previsualizaciones/preview3.png)
 
 
-## Invocación
+## Invocación Básica sin Confiruación
+```javascript
+    $.leftbar({}, [
+        ['Menú1','./Demos/images/1.jpg','#'],
+        ['Menú2','./Demos/images/2.jpg','#'],
+        ['Menú3','./Demos/images/3.jpg','#'],
+        ['Menú4','./Demos/images/4.jpg','#'],
+        ['Menú5','./Demos/images/5.jpg','#'],
+        ['Menú6','./Demos/images/6.jpg','http://www.fryntiz.es'],
+    ]);
+```
 
+## Invocación con Confiruación
+```javascript
+$.leftbar({
+    back1: 'rgba(0, 11, 255,1)',  // Degradado → 0%
+    back2: 'rgba(91, 255, 0,1)',  // Degradado → 20%
+    back3: 'rgba(255, 0, 109,1)', // Degradado → 45%
+    back4: 'rgba(255, 164, 0,1)', // Degradado → 100%
+    letras_color: '#FFD500',      // Color de letras título
+    letras_background: '#cc6633', // Color de fondo letras
+    letras_borde: '#000BFF',      // Color del borde para de letras
+},
+[
+    ['Menú1','./images/1.jpg','#'],
+    ['Menú2','./images/2.jpg','#'],
+    ['Menú3','./images/3.jpg','#'],
+    ['Menú4','./images/4.jpg','#'],
+    ['Menú5','./images/5.jpg','#'],
+    ['Menú6','./images/6.jpg','http://www.fryntiz.es'],
+]);
+```
 ## Tamaño de las imágenes
+El tamaño de las imágenes para el menú es de 120x80px
 
 ## Longitud máxima de título
+El menú está preparado para recibir una sola palabra, si la longitud de esta es
+demasiado larga podría no verse adecudadamente.
+
+En el caso de introducir varias palabras se verán fuera de lugar. Esto es así porque este menú está pensado para un acceso rápido a un enlace y además incluye una imagen que deberá ser descriptiba, por lo que la palabra no debería ser necesario que fuese larga o compuesta en principio.
 
 ## Modo de uso
-Importa primero la librería jQuery y después este plugin.
+Importa primero la librería jQuery y después este plugin, hazlo en ese orden antes de invocarlo (en el head).
 
 Ejemplo:
 ```html
     <script type="text/javascript" src="./jquery-3.3.1"></script>
     <script type="text/javascript" src="./jquery.leftbar.js"></script>
+```
+
+Ahora puedes llamar al plugin pasándole la configuración que más te guste y un array por cada elemento con el menú del elemento, la ruta hacia la imagen y por último su enlace:
+```javascript
+    [
+        ['Menú1','./images/1.jpg','#'],
+        ['Menú2','./images/2.jpg','#'],
+    ]
 ```
